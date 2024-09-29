@@ -17,15 +17,15 @@ const Photo = () => {
             ease: 'easeIn',
           },
         }}
-        className='w-[300px] h-[300px] xl:w-[500px] xl:h-[500px] absolute'
+        className='w-[270px] h-[270px] xl:w-[470px] xl:h-[470px] absolute'
       >
         <Image
-          src='/assets/photo.png'
+          src='/assets/photo.jpg'
           priority
           quality={100}
           fill
           alt='profile photo'
-          className='object-contain z-10 hover:scale-105 transition-all duration-500'
+          className='object-contain z-40 hover:scale-105 transition-all duration-500 rounded-full'
         />
       </motion.div>
 

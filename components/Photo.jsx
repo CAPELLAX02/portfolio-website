@@ -1,67 +1,52 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Photo = () => {
-  return (
-    <div className='w-full h-full relative'>
-      {/* Image */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: {
-            delay: 1,
-            duration: 0.4,
-            ease: 'easeIn',
-          },
-        }}
-        className='w-[270px] h-[270px] xl:w-[470px] xl:h-[470px] absolute'
-      >
-        <Image
-          src='/assets/photo.jpg'
-          priority
-          quality={100}
-          fill
-          alt='profile photo'
-          className='object-contain z-40 hover:scale-105 transition-all duration-300 rounded-full'
-        />
-      </motion.div>
+    return (
+        <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: [0, -10, 0, 10, 0] }}
+            transition={{
+                duration: 7,
+                repeat: Infinity,
+                ease: 'easeInOut',
+            }}
+            className="relative w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 xl:w-[370px] xl:h-[370px] 2xl:w-[420px] 2xl:h-[420px]"
+        >
+            {/* Outer Ring 1 */}
+            <motion.div
+                className="absolute inset-0 m-auto w-full h-full border-2 border-dashed border-gray-700 rounded-full opacity-40"
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+            />
 
-      {/* Circle */}
-      <motion.svg
-        className='w-[300px] h[300px] xl:w-[500px] xl:h-[500px] relative'
-        fill='rgba(0, 255, 255, 0.2)'
-        viewBox='0 -2 494 502'
-        xmlns='http://www.w3.org/2000/svg'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 1 } }}
-      >
-        <motion.circle
-          cx='247'
-          cy='250'
-          r='250'
-          stroke='rgba(57, 73, 171, 0.6)'
-          strokeWidth='3'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          initial={{
-            strokeDasharray: '24 10 0 0',
-          }}
-          animate={{
-            strokeDasharray: ['15 120 25 25', '16 25 92 72', '4 250 22 22'],
-            rotate: [120, 360],
-            transition: {
-              duration: 20,
-              repeat: Infinity,
-              repeatType: 'reverse',
-            },
-          }}
-        />
-      </motion.svg>
-    </div>
-  );
+            {/* Outer Ring 2 */}
+            <motion.div
+                className="absolute inset-0 m-auto w-[95%] h-[95%] border-4 border-dashed border-gray-600 rounded-full opacity-30"
+                animate={{ rotate: -360 }}
+                transition={{ repeat: Infinity, duration: 25, ease: 'linear' }}
+            />
+
+            {/* Outer Ring 3 */}
+            <motion.div
+                className="absolute inset-0 m-auto w-[90%] h-[90%] border-8 border-dashed border-gray-500 rounded-full opacity-20"
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 30, ease: 'linear' }}
+            />
+
+            {/* Photo */}
+            <div className="absolute inset-0 m-auto w-[78%] h-[78%] rounded-full overflow-hidden z-10 shadow-md">
+                <Image
+                    src="/assets/photo.jpg"
+                    alt="Profile"
+                    fill
+                    className="object-cover grayscale"
+                />
+            </div>
+        </motion.div>
+    );
 };
 
 export default Photo;

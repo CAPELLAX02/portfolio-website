@@ -2,10 +2,9 @@ import Photo from '@/components/Photo';
 import Social from '@/components/Social';
 import Stats from '@/components/Stats';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
 import { FiDownload } from 'react-icons/fi';
 
-const Home = () => {
+export default function Home() {
   return (
     <section className='h-full'>
       <div className='container mx-auto h-full'>
@@ -21,30 +20,28 @@ const Home = () => {
             </h1>
 
             <p className='max-w-[540px] mb-6 leading-relaxed'>
-              I am a computer science student as well as a full stack developer.
-              I have a keen interest in frontend and backend development, along
-              with creating mobile apps using React Native.
+              A Java backend developer and computer engineering student focused on delivering meaningful, innovative, and scalable solutions through expertise and dedication.
             </p>
             {/* Btn and socials */}
             <div className='flex flex-col xl:flex-row items-center gap-5 my-4'>
               <Button
                 variant='outline'
                 size='lg'
-                className='items-center gap-2 flex text-lg'
+                className='items-center hover:text-gray-200 gap-2 flex text-lg hover:border-gray-800 hover:bg-gray-800'
               >
                 <span>Download CV</span> <FiDownload className='text-xl' />
               </Button>
               <div className='ms-2 mb-8 xl:mb-0'>
                 <Social
-                  containerStyles='flex gap-6'
-                  iconStyles='m-auto w-14 h-14 border border-black rounded-none flex justify-center items-center text-black text-3xl hover:text-[40px] hover:bg-black hover:text-gray-200 hover:transition-all duration-100'
+                  containerStyles='flex gap-4'
+                  iconStyles='m-auto w-14 h-14 rounded-none flex justify-center items-center text-gray-200 text-3xl hover:text-[44px] bg-gray-800 text-gray-200 hover:bg-gray-100 hover:text-gray-900 hover:transition-all duration-100'
                 />
               </div>
             </div>
           </div>
 
           {/* Photo */}
-          <div>
+          <div className="order-1 xl:order-none">
             <Photo />
           </div>
         </div>
@@ -53,5 +50,3 @@ const Home = () => {
     </section>
   );
 };
-
-export default Home;

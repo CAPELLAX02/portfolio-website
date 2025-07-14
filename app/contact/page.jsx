@@ -91,7 +91,7 @@ const Contact = () => {
                 className='h-[100px] rounded-none border-none bg-gray-200/60'
                 placeholder='Type your message here.'
               />
-              <Button className='bg-gray-900 w-[72%] self-center hover:w-full hover:bg-gray-950'>
+              <Button className='bg-gray-900 w-[72%] text-white self-center hover:w-full hover:bg-gray-950'>
                 Send Message
               </Button>
             </form>

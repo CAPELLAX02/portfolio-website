@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-primary bg-primary text-black leading-loose;
+    @apply font-primary bg-gray-200 text-black leading-loose;
   }
   .h1 {
     @apply text-[48px] xl:text-[64px] leading-[1.1] font-bold;
@@ -19,7 +19,7 @@
 
 *::selection {
   color: #fff;
-  background-color: #222;
+  background-color: #111827;
 }
 
 .text-outline {

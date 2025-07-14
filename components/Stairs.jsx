@@ -18,12 +18,12 @@ const reverseIndex = (index) => {
 };
 
 const colors = [
-  '#000',
-  '#111',
-  '#222',
-  '#333',
-  '#444',
-  '#555',
+  '#9ca3af',
+  '#6b7280',
+  '#4b5563',
+  '#374151',
+  '#1f2937',
+  '#111827',
 ];
 
 console.log(colors[0]);
@@ -45,11 +45,11 @@ const Stairs = () => {
               delay: reverseIndex(index) * 0.1,
             }}
             style={{
-              backgroundColor: colors[index], // Renkleri dinamik olarak atayarak
-              width: '16.66%', // Her bir div'in genişliği toplam genişliğin 1/6'sı
-              height: '100%', // Yüksekliği tam ekran
-              position: 'absolute', // Pozisyonlandırma türü
-              left: `${16.66 * index}%`, // Sol kenardan itibaren her bir div için pozisyon ayarı
+              backgroundColor: colors[index],
+              width: '16.66%',
+              height: '100%',
+              position: 'absolute',
+              left: `${16.66 * index}%`,
             }}
           ></motion.div>
         );

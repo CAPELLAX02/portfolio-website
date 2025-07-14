@@ -25,7 +25,7 @@ const Photo = () => {
           quality={100}
           fill
           alt='profile photo'
-          className='object-contain z-40 hover:scale-105 transition-all duration-500 rounded-full'
+          className='object-contain z-40 hover:scale-105 transition-all duration-300 rounded-full'
         />
       </motion.div>
 

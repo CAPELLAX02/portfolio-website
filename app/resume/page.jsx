@@ -230,7 +230,7 @@ const Resume = () => {
         opacity: 1,
         transition: {
           delay: 1,
-          duration: 0.4,
+          duration: 0.3,
           ease: 'easeInOut',
         },
       }}
@@ -242,15 +242,13 @@ const Resume = () => {
           className='flex flex-col xl:flex-row gap-12'
         >
           <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 items-center'>
-            <TabsTrigger value='experience'>Experience</TabsTrigger>
-            <TabsTrigger value='education'>
-              Education & Certificates
-            </TabsTrigger>
+            <TabsTrigger value='experience'>Education & Experience</TabsTrigger>
+            <TabsTrigger value='education'>Certificates</TabsTrigger>
             <TabsTrigger value='skills'>Skills</TabsTrigger>
             <TabsTrigger value='about'>About Me</TabsTrigger>
           </TabsList>
 
-          <div className='min-h-[70vh] w-full'>
+          <div className='min-h-[100vh] w-full'>
             <TabsContent className='w-full h-full' value='experience'>
               <div className='flex flex-col gap-6 text-center xl:text-left'>
                 <h3 className='text-4xl font-bold'>{experience.title}</h3>
@@ -265,14 +263,14 @@ const Resume = () => {
                           key={index}
                           className='bg-[#fff] px-6 py-4 flex flex-col justify-center items-center lg:items-start mr-6'
                         >
-                          <span className='text-indigo-500'>
+                          <span className='text-gray-500'>
                             {item.duration}
                           </span>
                           <h3 className='text-xl max-w-[260px] text-center lg:text-left font-semibold'>
                             {item.position}
                           </h3>
                           <div className='flex items-center gap-3'>
-                            <span className='w-[8px] h-[8px] rounded-full bg-indigo-500'></span>
+                            <span className='w-[8px] h-[8px] rounded-full bg-gray-500'></span>
                             <p className='text-black'>{item.company}</p>
                           </div>
                         </li>
@@ -297,21 +295,21 @@ const Resume = () => {
                           className='bg-[#fff] px-6 py-4 flex flex-col justify-center items-center lg:items-start mr-6 relative'
                         >
                           <div>
-                            <span className='text-indigo-500'>
+                            <span className='text-gray-500'>
                               {item.duration}
                             </span>
                             <h3 className='text-xl text-center lg:text-left font-semibold'>
                               {item.degree}
                             </h3>
                             <div className='flex items-center gap-3'>
-                              <span className='w-[8px] h-[8px] rounded-full bg-indigo-500'></span>
+                              <span className='w-[8px] h-[8px] rounded-full bg-gray-500'></span>
                               <p className='text-black'>{item.institution}</p>
                             </div>
                           </div>
                           <div>
                             {!item.certification && (
                               <a
-                                className='text-sm text-indigo-500 underline xl:absolute right-4 bottom-4'
+                                className='text-sm text-gray-500 underline xl:absolute right-4 bottom-4'
                                 href='#'
                               >
                                 Show Cerfication
@@ -339,8 +337,8 @@ const Resume = () => {
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className='w-full sm:py-12 md-py-8 lg:py-10 xl:py-7 py-8 bg-[#f2e5d9] hover:bg-black transition-all duration-200 flex justify-center items-center group'>
-                              <div className='text-5xl group-hover:text-primary transition-all duration-100'>
+                            <TooltipTrigger className='w-full sm:py-12 md-py-8 lg:py-10 xl:py-7 py-8 bg-gray-900 hover:bg-white transition-all duration-300 flex justify-center items-center group'>
+                              <div className='text-5xl text-gray-200 group-hover:text-gray-900 transition-all duration-300'>
                                 {item.icon}
                               </div>
                             </TooltipTrigger>

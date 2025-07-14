@@ -39,22 +39,22 @@ const info = [
 
 const Contact = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, x: -500 }}
-      animate={{
-        opacity: 1,
-        x: 0,
-        transition: {
-          delay: 1,
-          duration: 0.5,
-          ease: 'easeIn',
-        },
-      }}
-      className='py-6'
-    >
+    <section className='py-6'>
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-6'>
-          <div className='xl:h-[60%] order-2 xl:order-none'>
+          <motion.div
+              initial={{ opacity: 0, x: -500 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  delay: 1,
+                  duration: 0.3,
+                  ease: 'easeIn',
+                },
+              }}
+              className='xl:h-[60%] order-2 xl:order-none'
+          >
             <form className='flex flex-col gap-6 p-10 bg-white'>
               <h3 className='text-4xl text-gray-900 font-extrabold'>
                 Let's Connect.
@@ -95,8 +95,20 @@ const Contact = () => {
                 Send Message
               </Button>
             </form>
-          </div>
-          <div className='text-white flex-1 flex items-center xl:items-start xl:justify-end order-1 xl:order-none mb-4 xl:mb-0'>
+          </motion.div>
+          <motion.div
+              initial={{ opacity: 0, x: 500 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  delay: 1,
+                  duration: 0.3,
+                  ease: 'easeIn',
+                },
+              }}
+              className='text-white flex-1 flex items-center xl:items-start xl:justify-end order-1 xl:order-none mb-4 xl:mb-0'
+          >
             <ul className='flex flex-col gap-10 bg-gray-900 p-8 w-full'>
               {info.map((item, index) => {
                 return (
@@ -113,10 +125,10 @@ const Contact = () => {
                 );
               })}
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

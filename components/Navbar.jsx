@@ -9,10 +9,6 @@ const links = [
     path: '/',
   },
   {
-    name: 'services',
-    path: '/services',
-  },
-  {
     name: 'resume',
     path: '/resume',
   },
@@ -37,8 +33,8 @@ const Navbar = () => {
             key={index}
             href={link.path}
             className={`${
-              link.path === pathname && 'text-white p-1 px-3 bg-gray-800'
-            } capitalize font-medium hover:text-black hover:bg-gray-50 hover:px-3 p-1 transition-all my-auto`}
+              link.path === pathname && 'text-white p-1 px-3 bg-gray-800 hover:px-4'
+            } capitalize font-medium hover:text-gray-900 hover:bg-gray-50 hover:px-3 p-1 transition-all my-auto`}
           >
             {link.name}
           </Link>

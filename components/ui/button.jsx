@@ -15,9 +15,9 @@ const buttonVariants = cva(
                     'border border-black bg-transparent text-black hover:bg-black hover:text-primary',
             },
             size: {
-                default: 'h-[40px] px-5 hover:px-6',
-                md: 'h-[48px] px-5 hover:px-6',
-                lg: 'h-[56px] px-6 hover:px-8 text-sm uppercase tracking-[2px]',
+                default: 'h-[40px] px-5',
+                md: 'h-[48px] px-5',
+                lg: 'h-[56px] px-6 text-sm uppercase tracking-[2px]',
             },
         },
         defaultVariants: {

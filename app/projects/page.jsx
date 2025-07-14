@@ -171,7 +171,7 @@ const ProjectSection = ({ project }) => (
   <div
     className={`flex flex-col xl:flex-row gap-10 xl:gap-16 mb-36 pb-36 ${
       Number(project.num) != projects.length
-        ? 'border-b-2 border-indigo-600'
+        ? 'border-b-2 border-gray-600'
         : ''
     }`}
   >
@@ -190,8 +190,8 @@ const ProjectSection = ({ project }) => (
               <Link href={project.live}>
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
-                    <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-primary hover:bg-stone-800 border-2 border-stone-800 flex justify-center items-center group hover:-rotate-90 transition-all duration-200'>
-                      <BsArrowDownRight className='text-stone-800 text-3xl group-hover:text-primary group-hover:text-4xl ' />
+                    <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-gray-200 hover:bg-gray-800 border-2 border-gray-800 flex justify-center items-center group hover:-rotate-90 transition-all duration-200'>
+                      <BsArrowDownRight className='text-gray-800 text-3xl group-hover:text-white group-hover:text-4xl ' />
                     </TooltipTrigger>
                     <TooltipContent>
                       <p>Live Project</p>
@@ -203,8 +203,8 @@ const ProjectSection = ({ project }) => (
               <Link href={project.github}>
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
-                    <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-stone-800 hover:bg-primary flex justify-center items-center group transition-all'>
-                      <BsGithub className='text-primary text-4xl group-hover:text-stone-800 group-hover:text-7xl transition-all duration-200' />
+                    <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-gray-800 hover:bg-gray-200 flex justify-center items-center group transition-all'>
+                      <BsGithub className='text-gray-200 text-4xl group-hover:text-gray-800 group-hover:text-7xl transition-all duration-200' />
                     </TooltipTrigger>
                     <TooltipContent>
                       <p>See Code</p>
@@ -219,7 +219,7 @@ const ProjectSection = ({ project }) => (
           {project.title}
         </h1>
 
-        <span className='px-1 w-44 text-center text-white bg-rose-500 rounded-full font-semibold capitalize text-md'>
+        <span className='px-1 w-44 text-center text-white bg-red-700 rounded-full font-semibold capitalize text-md'>
           {project.category} project
         </span>
 
@@ -231,7 +231,7 @@ const ProjectSection = ({ project }) => (
               <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger>
-                    <div className='text-3xl hover:text-primary transition-all duration-200 bg-[#ebd8c6] p-3 hover:bg-stone-800'>
+                    <div className='text-3xl hover:text-white transition-all duration-200 bg-white p-3 hover:bg-gray-800'>
                       {item.icon}
                     </div>
                   </TooltipTrigger>
@@ -250,8 +250,8 @@ const ProjectSection = ({ project }) => (
       <Swiper spaceBetween={30} slidesPerView={1} className='xl:h-[520px]'>
         {project.images.map((image, imgIndex) => (
           <SwiperSlide key={imgIndex} className='w-full'>
-            <div className='h-[460px] relative group flex justify-center items-center bg-stone-400'>
-              <div className='absolute top-0 bottom-0 w-full h-full bg-yellow-300'></div>
+            <div className='h-[460px] relative group flex justify-center items-center bg-gray-400'>
+              <div className='absolute top-0 bottom-0 w-full h-full bg-red-700'></div>
               <div className='relative w-full h-full'>
                 <Image
                   fill
@@ -265,7 +265,7 @@ const ProjectSection = ({ project }) => (
         ))}
         <SliderButtons
           containerStyles='flex gap-2 absolute left-[50px] bottom-[calc(50% * 20px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-center'
-          btnStyles='bg-yellow-300 hover:bg-green-400 text-black text-2xl w-[44px] h-[44px] flex justify-center items-center transition-all rounded-full hover:bg-indigo-500 hover:text-white'
+          btnStyles='bg-gray-700 hover:bg-gray-600 text-white text-2xl w-[44px] h-[44px] flex justify-center items-center transition-all rounded-full hover:bg-indigo-500 hover:text-white'
           iconStyles='hover:text-white '
         />
       </Swiper>

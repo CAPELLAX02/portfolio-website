@@ -18,12 +18,12 @@ const reverseIndex = (index) => {
 };
 
 const colors = [
-  '#E40303',
-  '#FF8C00',
-  '#FFED00',
-  '#008026',
-  '#004CFF',
-  '#732982',
+  '#000',
+  '#111',
+  '#222',
+  '#333',
+  '#444',
+  '#555',
 ];
 
 console.log(colors[0]);

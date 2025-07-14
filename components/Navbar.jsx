@@ -37,8 +37,8 @@ const Navbar = () => {
             key={index}
             href={link.path}
             className={`${
-              link.path === pathname && 'text-black p-1 px-3 bg-yellow-300'
-            } capitalize font-medium hover:text-black hover:bg-sky-300 hover:px-3 p-1 transition-all my-auto`}
+              link.path === pathname && 'text-white p-1 px-3 bg-gray-800'
+            } capitalize font-medium hover:text-black hover:bg-gray-50 hover:px-3 p-1 transition-all my-auto`}
           >
             {link.name}
           </Link>

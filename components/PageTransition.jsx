@@ -19,7 +19,7 @@ const PageTransition = ({ children }) => {
                             ease: 'easeInOut',
                         },
                     }}
-                    className='h-screen w-screen fixed bg-primary top-0 pointer-events-none'
+                    className='h-screen w-screen fixed bg-gray-900 top-0 pointer-events-none'
                 ></motion.div>
                 {children}
             </div>

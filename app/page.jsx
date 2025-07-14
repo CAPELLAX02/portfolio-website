@@ -12,12 +12,12 @@ const Home = () => {
         <div className='flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-32 xl:pt-8 xl:pb-24'>
           {/* Text */}
           <div className='text-center xl:text-left order-2 xl:order-none'>
-            <span className='py-1 px-5 text-white bg-rose-500 rounded-full font-semibold'>
-              Full-Stack Engineer
+            <span className='py-1 px-5 text-white bg-red-600 rounded-full font-semibold'>
+              Backend Software Engineer
             </span>
             <h1 className='h1 my-3'>
               Hello, I am <br />
-              <span className='text-indigo-600'>Ahmet Atar</span>
+              <span className='text-red-600'>Ahmet Atar.</span>
             </h1>
 
             <p className='max-w-[540px] mb-6 leading-relaxed'>

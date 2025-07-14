@@ -18,8 +18,8 @@
 }
 
 *::selection {
-  color: #fff2e5;
-  background-color: #333;
+  color: #fff;
+  background-color: #cc0000;
 }
 
 .text-outline {

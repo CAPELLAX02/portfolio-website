@@ -55,9 +55,9 @@ const Contact = () => {
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-6'>
           <div className='xl:h-[60%] order-2 xl:order-none'>
-            <form className='flex flex-col gap-6 p-10 bg-yellow-400'>
-              <h3 className='text-4xl text-indigo-600 font-extrabold'>
-                Let's work together.
+            <form className='flex flex-col gap-6 p-10 bg-white'>
+              <h3 className='text-4xl text-gray-900 font-extrabold'>
+                Let's Connect.
               </h3>
               <p className='font-semibold text-base'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
@@ -68,57 +68,40 @@ const Contact = () => {
                   <Input
                     type='firstname'
                     placeholder='First Name'
-                    className='mb-5 border-none  rounded-none bg-white '
+                    className='mb-5 border-none  rounded-none bg-gray-200/60'
                   />
                   <Input
                     type='lastname'
                     placeholder='Last Name'
-                    className='mb-5 border-none rounded-none bg-white '
+                    className='mb-5 border-none rounded-none bg-gray-200/60'
                   />
                 </div>
                 <Input
                   type='email'
                   placeholder='Email Address'
-                  className='mb-5 border-none rounded-none bg-white '
+                  className='mb-5 border-none rounded-none bg-gray-200/60'
                 />
                 <Input
                   type='phone'
                   placeholder='Phone'
-                  className='border-none  rounded-none bg-white '
+                  className='border-none  rounded-none bg-gray-200/60'
                 />
               </div>
-              <Select>
-                <SelectTrigger className='w-full border-none rounded-none'>
-                  <SelectValue
-                    placeholder='Select a service'
-                    className='placeholder:'
-                  />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value='1'>Frontend Development</SelectItem>
-                    <SelectItem value='2'>Backend Development</SelectItem>
-                    <SelectItem value='3'>Mobile App Development</SelectItem>
-                    <SelectItem value='4'>Full-Stack Development</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
               <Textarea
-                className='h-[160px] placeholder: rounded-none border-none'
+                className='h-[100px] rounded-none border-none bg-gray-200/60'
                 placeholder='Type your message here.'
               />
-              <Button className='bg-indigo-600 w-[72%] self-center hover:w-full hover:bg-stone-700'>
+              <Button className='bg-gray-900 w-[72%] self-center hover:w-full hover:bg-gray-950'>
                 Send Message
               </Button>
             </form>
           </div>
-          <div className='flex-1 flex items-center xl:items-start xl:justify-end order-1 xl:order-none mb-4 xl:mb-0'>
-            <ul className='flex flex-col gap-10 bg-sky-400 p-8 w-full'>
+          <div className='text-white flex-1 flex items-center xl:items-start xl:justify-end order-1 xl:order-none mb-4 xl:mb-0'>
+            <ul className='flex flex-col gap-10 bg-gray-900 p-8 w-full'>
               {info.map((item, index) => {
                 return (
                   <li key={index} className='flex items-center gap-6'>
-                    <div className='w-12 h-12 flex items-center justify-center bg-white text-sky-500 rounded-full'>
+                    <div className='w-12 h-12 flex items-center justify-center bg-white text-gray-900 rounded-full'>
                       <div>{item.icon}</div>
                     </div>
                     <div className='flex-1'>
